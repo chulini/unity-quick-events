@@ -14,7 +14,7 @@ if vars_declaration != ""
 	end
 end
 
-puts "---- IN EventsManager.cs ----"
+puts "---- To declare event, in your EventsManager.cs ----"
 puts "
 public delegate void #{f}Delegate(#{vars_declaration});
 public static event #{f}Delegate #{f}Event;
@@ -23,12 +23,12 @@ public static void #{f}(#{vars_declaration}){
 		#{f}Event(#{var_names});
 }
 "
-puts "\n\n\n\n---- To trigger event ----"
+puts "\n\n\n\n---- To trigger event, from any class ----"
 puts "
 EventsManager.#{f}(#{var_names});
 "
 
-puts "\n\n\n\n---- To subscribe to event ----"
+puts "\n\n\n\n---- To subscribe to event, from any MonoBehaviour class ----"
 puts "
 void OnEnable(){
 	EventsManager.#{f}Event += #{f}Event;

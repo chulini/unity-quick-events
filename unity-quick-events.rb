@@ -2,7 +2,7 @@
 f = ARGV[0].split('(')[0].split(' ')[0]
 vars_declaration = ARGV[0].split('(')[1].split(')')[0]
 var_names = ""
-if vars_declaration != ""
+if vars_declaration != nil
 	i = 0;
 	for var in vars_declaration.split(',') do
 		# puts "var[#{i}]=#{var}"
